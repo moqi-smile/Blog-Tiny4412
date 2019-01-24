@@ -68,10 +68,20 @@ Arm 架构
 
     Svc/操作系统保护模式 : 执行boatload与kernel
 
-    Abort模式 : 处理存储器故障、实现虚拟存储器和存储器保护
+    Abort 模式 : 处理存储器故障、实现虚拟存储器和存储器保护
 
     Irq/中断模式 : 处理普通中断
 
     Fiq/快速中断模式 : 处理快速中断，支持高速数据传送或通道处理
 
     unde/未定义模式 : 执行到未定义的指令
+
+.. note::
+
+    1. 普通模式 : User
+    #. 特权模式 : System Svc unde Abort Irq Fiq
+    #. 异常模式 : Svc unde Abort Irq Fiq
+
+.. note::
+
+    每一个异常模式都有自己的R13和R14，SPSR
