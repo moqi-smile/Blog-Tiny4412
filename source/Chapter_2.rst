@@ -12,7 +12,7 @@
 
 .. code::
 
-        git clone https://github.com/moqi-smile/Tiny4412-sources.git
+    git clone https://github.com/moqi-smile/Tiny4412-sources.git
 
 也可以在友善之臂的官方github里获取
 
@@ -68,7 +68,7 @@ u-boot启动的时候会有一个命令行提示符, 如果你们想要更改的
     :align: center
     :figclass: align-center
 
-因为我们关闭了MMU, 所以也需要将链接地址更改, 打开文件 board/samsung/tiny4412/config.mk 将里面的 
+因为我们关闭了MMU, 所以也需要将链接地址更改, 打开文件 board/samsung/tiny4412/config.mk 将里面的
 
 .. code::
 
@@ -104,15 +104,3 @@ u-boot启动的时候会有一个命令行提示符, 如果你们想要更改的
 .. figure:: ./_static/uboot-output.png
     :align: center
     :figclass: align-center
-
-
-
-
-
-
-
-
-
-
-
-
