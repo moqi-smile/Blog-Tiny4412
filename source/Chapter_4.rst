@@ -99,6 +99,3 @@
 
 复制完以后, 我们创建的文件系统就像下图所示
 
-.. figure:: ./_static/Chapter_4-filesystem.png
-    :align: center
-    :figclass: align-center
