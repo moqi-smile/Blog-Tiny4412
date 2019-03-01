@@ -43,7 +43,7 @@
 
 如果有输出以下日志, 则证明安装成功
 
-.. figure:: ./_static/CheckToolchain.png
+.. figure:: ./_static/Chapter_1/CheckToolchain.png
 	:align: center
 	:figclass: align-center
 
