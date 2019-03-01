@@ -6,7 +6,7 @@
 
 .. note::
 
-    推荐使用32位的linux系统，因为友善之臂给的交叉编译链与，都是32位的。如果你当前已经是64位的系统也不怕，只需要安装32位的兼容工具就好了。
+	推荐使用32位的linux系统，因为友善之臂给的交叉编译链与，都是32位的。如果你当前已经是64位的系统也不怕，只需要安装32位的兼容工具就好了。
 
 -----------------------------------------------------------
 一. 编译Linux内核
@@ -30,27 +30,27 @@
 
 .. note::
 
-    tar xvf busybox-1.17.2-20101120.tgz && cd busybox-1.17.2/
+	tar xvf busybox-1.17.2-20101120.tgz && cd busybox-1.17.2/
 
 我们需要先给busybox设置默认配置
 
 .. note::
 
-    make defconfig
+	make defconfig
 
 接下来进入菜单配置busybox
 
 .. note::
 
-    make menuconfig
+	make menuconfig
 
 选择以下选项
 
 .. code::
 
-    Busybox Settings  --->
-        Build Options  --->
-            [ ] Build static binary (no shared libs)
+	Busybox Settings  --->
+		Build Options  --->
+			[ ] Build static binary (no shared libs)
 
 将该选项勾选以后，编译出来的可执行文件将不依赖动态库，而是使用静态库。
 
@@ -62,8 +62,8 @@
 
 .. code::
 
-    Linux Module Utilities  --->
-    [*] Simplified modutils
+	Linux Module Utilities  --->
+	[*] Simplified modutils
 
 然后将弹出来的所有选项勾选上，选完以后如下图。
 
@@ -71,34 +71,34 @@
 
 .. code::
 
-    make && make install
+	make && make install
 
 执行完以后，在当前目录下会出现一个_install文件夹，进入到该文件夹
 
 .. code::
 
-    cd _install
+	cd _install
 
 该文件夹存放着我们编译完的文件系统。但这个文件系统还不完全,还需要我们创建其他的文件夹。
 
 .. code::
 
-    mkdir proc sys dev tmp mnt root home opt var
+	mkdir proc sys dev tmp mnt root home opt var
 
 在交叉编译链里获取 lib
 
 .. code::
 
-    cp -rf /opt/arm-linux-gcc-4.5.1/arm-none-linux-gnueabi/sys-root/lib/ .
+	cp -rf /opt/arm-linux-gcc-4.5.1/arm-none-linux-gnueabi/sys-root/lib/ .
 
 在busybox源码目录下获取 etc 文件夹
 
 .. code::
 
-    cp  -rf ../examples/bootfloppy/etc/ ./
+	cp  -rf ../examples/bootfloppy/etc/ ./
 
 复制完以后, 我们创建的文件系统就像下图所示
 
 .. figure:: ./_static/Chapter_4-filesystem.png
-    :align: center
-    :figclass: align-center
+	:align: center
+	:figclass: align-center
