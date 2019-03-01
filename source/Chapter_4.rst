@@ -75,7 +75,6 @@
     :align: center
     :figclass: align-center
 
-
 然后退出菜单，保存配置。接下来编译并安装busybox
 
 .. code::
