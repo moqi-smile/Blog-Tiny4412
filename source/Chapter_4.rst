@@ -71,10 +71,6 @@
 
 然后将弹出来的所有选项勾选上，选完以后如下图。
 
-.. figure:: ./_static/Chapter_4-Changemenuconfig2.png
-    :align: center
-    :figclass: align-center
-
 然后退出菜单，保存配置。接下来编译并安装busybox
 
 .. code::
